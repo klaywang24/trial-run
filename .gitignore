@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env*
+*.pem
+*.key
+
+# Personal private content; never enters the public repository
+private/
+HANDOFF*.md
+README-项目地图.md
