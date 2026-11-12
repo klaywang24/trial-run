@@ -1,0 +1,18 @@
+asof_close,ticker,mom_12_1,rank,above_10m_ma,chip,pre_launch_weight,decision
+2026-11-11,LITE,2.8016,1,True,True,0.02,keep
+2026-11-11,MU,2.7668,2,True,True,0.06,keep
+2026-11-11,AMD,1.4819,3,True,True,0,not held
+2026-11-11,LRCX,0.8182,4,False,True,0,not held
+2026-11-11,GEV,0.7349,5,False,False,0.04,keep
+2026-11-11,TSM,0.5235,6,True,True,0.055,keep
+2026-11-11,NET,0.4456,7,True,False,0.054,keep
+2026-11-11,AAPL,0.2701,8,True,False,0.058,keep
+2026-11-11,GOOGL,0.2227,9,False,False,0,not held
+2026-11-11,META,0.211,10,False,False,0.05,keep
+2026-11-11,NVDA,0.1508,11,True,True,0.075,keep
+2026-11-11,MSFT,0.0828,12,True,False,0.04,keep
+2026-11-11,PLTR,0.0778,13,True,False,0.055,exit
+2026-11-11,AMZN,0.041,14,False,False,0.01,exit
+2026-11-11,AVGO,0.0044,15,False,True,0.045,exit
+2026-11-11,APP,-0.582,16,False,False,0,not held
+2026-11-11,SPCX,,,,False,0,too new to rank

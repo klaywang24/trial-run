@@ -1,0 +1,10 @@
+,,cagr_pct,max_drawdown_pct,turnover_pct
+full pool,"A0 whole pool, equal weight",45.56,-52.7,27.0
+full pool,B4 = B3 + quarterly stop,51.67,-42.91,18.03
+full pool,B7 = B3 + chips cap + stop + switch (v1.0),47.21,-38.98,114.02
+without NVDA,"A0 whole pool, equal weight",43.25,-52.52,26.53
+without NVDA,B4 = B3 + quarterly stop,36.36,-41.53,13.69
+without NVDA,B7 = B3 + chips cap + stop + switch (v1.0),33.91,-36.96,112.65
+"without NVDA, APP, PLTR","A0 whole pool, equal weight",40.96,-46.35,23.9
+"without NVDA, APP, PLTR",B4 = B3 + quarterly stop,30.76,-41.84,3.94
+"without NVDA, APP, PLTR",B7 = B3 + chips cap + stop + switch (v1.0),28.82,-37.05,103.93

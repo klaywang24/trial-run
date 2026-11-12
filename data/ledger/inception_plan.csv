@@ -1,0 +1,21 @@
+ticker,sleeve,target_weight,reason
+NVDA,ai,0.066372,"held, rank 11 <= 12"
+MU,ai,0.053097,"held, rank 2 <= 12"
+AAPL,ai,0.051327,"held, rank 8 <= 12"
+TSM,ai,0.048673,"held, rank 6 <= 12"
+NET,ai,0.047788,"held, rank 7 <= 12"
+META,ai,0.044248,"held, rank 10 <= 12"
+MSFT,ai,0.035398,"held, rank 12 <= 12"
+GEV,ai,0.035398,"held, rank 5 <= 12"
+LITE,ai,0.017699,"held, rank 1 <= 12"
+GRMN,sports,0.06,fixed sleeve
+MSGK,sports,0.04,fixed sleeve
+V,fintech,0.04,fixed sleeve
+MA,fintech,0.03,fixed sleeve
+AXP,fintech,0.03,fixed sleeve
+LLY,health_energy,0.05,fixed sleeve
+XLE,health_energy,0.05,fixed sleeve
+SPDV,income,0.1,fixed sleeve
+KO,defense,0.05,fixed sleeve
+BRK-B,defense,0.05,fixed sleeve
+BIL,reserve,0.1,fixed sleeve

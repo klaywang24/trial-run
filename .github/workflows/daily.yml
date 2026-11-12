@@ -1,0 +1,69 @@
+name: daily ledger
+
+# Record the paper portfolio after each US close. Self-gating rules (monthly switch, quarterly check, January
+# selection) fire inside src/daily.py. This workflow only produces `data:` commits and never touches rule files.
+on:
+  schedule:
+    - cron: "30 17 * * 1-5"   # 17:30 New York, after the close settles
+      timezone: "America/New_York"
+    - cron: "30 19 * * 1-5"   # backup run; idempotent, a recorded day is skipped
+      timezone: "America/New_York"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: install deps
+        run: pip install --quiet pandas pyyaml yfinance
+
+      # The rules are frozen: a config.yaml that does not match FROZEN.sha256 stops the day.
+      - name: frozen rules check
+        run: python -m tests.check_frozen
+
+      - name: rule invariants (offline)
+        run: python -m tests.test_rules
+
+      - name: update ledger
+        run: python -m src.daily
+
+      - name: render charts
+        run: python -m src.render
+
+      - name: commit data
+        run: |
+          git config user.name  "Klay"
+          git config user.email "klaywang24@gmail.com"
+          git add data/ledger/ output/ || true
+          if git diff --staged --quiet; then
+            echo "no change"; exit 0
+          fi
+          git commit -m "data: daily ledger $(tail -1 data/ledger/nav.csv | cut -d, -f1)"
+          for delay in 5 15; do
+            if git push; then exit 0; fi
+            sleep "$delay"; git pull --rebase
+          done
+          git push
+
+      - name: anchor to Wayback
+        continue-on-error: true
+        run: |
+          REPO="${GITHUB_REPOSITORY}"
+          for u in \
+            "https://github.com/${REPO}" \
+            "https://github.com/${REPO}/blob/main/METHODOLOGY.md" \
+            "https://github.com/${REPO}/blob/main/data/ledger/nav.csv" \
+            "https://github.com/${REPO}/commits/main"
+          do
+            curl -sS -m 60 "https://web.archive.org/save/$u" -o /dev/null || true
+            sleep 5
+          done

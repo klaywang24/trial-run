@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 508" font-family="ui-sans-serif,system-ui,-apple-system,sans-serif">
+<text x="20" y="24" font-size="15" font-weight="600" fill="#8b949e">AI pool · 12-1 momentum ranking</text>
+<text x="20" y="43" font-size="12" fill="#8b949e" opacity="0.8">closes through 2026-11-11 · the ranking the next decision would use</text>
+<rect x="20" y="52" width="10" height="10" fill="#a0392f"/>
+<text x="34" y="61" font-size="11" fill="#8b949e">held</text>
+<rect x="72" y="52" width="10" height="10" fill="#9aa3ad"/>
+<text x="86" y="61" font-size="11" fill="#8b949e">not held</text>
+<line x1="244.0" y1="66" x2="244.0" y2="482" stroke="#8b949e" stroke-opacity="0.5"/>
+<rect x="244.0" y="73" width="356.0" height="16" fill="#a0392f" rx="2"/>
+<text x="162" y="85.0" font-size="12" fill="#8b949e" text-anchor="end">1. LITE</text>
+<text x="605.0" y="85.0" font-size="11" fill="#8b949e" text-anchor="start">+280% · held · chip</text>
+<rect x="244.0" y="97" width="351.6" height="16" fill="#a0392f" rx="2"/>
+<text x="162" y="109.0" font-size="12" fill="#8b949e" text-anchor="end">2. MU</text>
+<text x="600.6" y="109.0" font-size="11" fill="#8b949e" text-anchor="start">+277% · held · chip</text>
+<rect x="244.0" y="121" width="188.3" height="16" fill="#9aa3ad" rx="2"/>
+<text x="162" y="133.0" font-size="12" fill="#8b949e" text-anchor="end">3. AMD</text>
+<text x="437.3" y="133.0" font-size="11" fill="#8b949e" text-anchor="start">+148% · chip</text>
+<rect x="244.0" y="145" width="104.0" height="16" fill="#9aa3ad" rx="2"/>
+<text x="162" y="157.0" font-size="12" fill="#8b949e" text-anchor="end">4. LRCX</text>
+<text x="352.9" y="157.0" font-size="11" fill="#8b949e" text-anchor="start">+82% · chip · below 10m MA</text>
+<rect x="244.0" y="169" width="93.4" height="16" fill="#a0392f" rx="2"/>
+<text x="162" y="181.0" font-size="12" fill="#8b949e" text-anchor="end">5. GEV</text>
+<text x="342.4" y="181.0" font-size="11" fill="#8b949e" text-anchor="start">+73% · held · below 10m MA</text>
+<rect x="244.0" y="193" width="66.5" height="16" fill="#a0392f" rx="2"/>
+<text x="162" y="205.0" font-size="12" fill="#8b949e" text-anchor="end">6. TSM</text>
+<text x="315.5" y="205.0" font-size="11" fill="#8b949e" text-anchor="start">+52% · held · chip</text>
+<rect x="244.0" y="217" width="56.6" height="16" fill="#a0392f" rx="2"/>
+<text x="162" y="229.0" font-size="12" fill="#8b949e" text-anchor="end">7. NET</text>
+<text x="305.6" y="229.0" font-size="11" fill="#8b949e" text-anchor="start">+45% · held</text>
+<rect x="244.0" y="241" width="34.3" height="16" fill="#a0392f" rx="2"/>
+<text x="162" y="253.0" font-size="12" fill="#8b949e" text-anchor="end">8. AAPL</text>
+<text x="283.3" y="253.0" font-size="11" fill="#8b949e" text-anchor="start">+27% · held</text>
+<line x1="20" y1="260.0" x2="840" y2="260.0" stroke="#8b949e" stroke-opacity="0.55" stroke-dasharray="5 4"/>
+<text x="840" y="257.0" font-size="10.5" fill="#8b949e" text-anchor="end" opacity="0.8">top 8 line (new buys come from above)</text>
+<rect x="244.0" y="265" width="28.3" height="16" fill="#9aa3ad" rx="2"/>
+<text x="162" y="277.0" font-size="12" fill="#8b949e" text-anchor="end">9. GOOGL</text>
+<text x="277.3" y="277.0" font-size="11" fill="#8b949e" text-anchor="start">+22% · below 10m MA</text>
+<rect x="244.0" y="289" width="26.8" height="16" fill="#a0392f" rx="2"/>
+<text x="162" y="301.0" font-size="12" fill="#8b949e" text-anchor="end">10. META</text>
+<text x="275.8" y="301.0" font-size="11" fill="#8b949e" text-anchor="start">+21% · held · below 10m MA</text>
+<rect x="244.0" y="313" width="19.2" height="16" fill="#a0392f" rx="2"/>
+<text x="162" y="325.0" font-size="12" fill="#8b949e" text-anchor="end">11. NVDA</text>
+<text x="268.1" y="325.0" font-size="11" fill="#8b949e" text-anchor="start">+15% · held · chip</text>
+<rect x="244.0" y="337" width="10.5" height="16" fill="#a0392f" rx="2"/>
+<text x="162" y="349.0" font-size="12" fill="#8b949e" text-anchor="end">12. MSFT</text>
+<text x="259.5" y="349.0" font-size="11" fill="#8b949e" text-anchor="start">+8% · held</text>
+<line x1="20" y1="356.0" x2="840" y2="356.0" stroke="#8b949e" stroke-opacity="0.55" stroke-dasharray="5 4"/>
+<text x="840" y="353.0" font-size="10.5" fill="#8b949e" text-anchor="end" opacity="0.8">exit line: a held name below rank 12 is sold in January</text>
+<rect x="244.0" y="361" width="9.9" height="16" fill="#9aa3ad" rx="2"/>
+<text x="162" y="373.0" font-size="12" fill="#8b949e" text-anchor="end">13. PLTR</text>
+<text x="258.8" y="373.0" font-size="11" fill="#8b949e" text-anchor="start">+8%</text>
+<rect x="244.0" y="385" width="5.2" height="16" fill="#9aa3ad" rx="2"/>
+<text x="162" y="397.0" font-size="12" fill="#8b949e" text-anchor="end">14. AMZN</text>
+<text x="254.2" y="397.0" font-size="11" fill="#8b949e" text-anchor="start">+4% · below 10m MA</text>
+<rect x="244.0" y="409" width="1.0" height="16" fill="#9aa3ad" rx="2"/>
+<text x="162" y="421.0" font-size="12" fill="#8b949e" text-anchor="end">15. AVGO</text>
+<text x="249.5" y="421.0" font-size="11" fill="#8b949e" text-anchor="start">+0% · chip · below 10m MA</text>
+<rect x="170.0" y="433" width="74.0" height="16" fill="#9aa3ad" rx="2"/>
+<text x="162" y="445.0" font-size="12" fill="#8b949e" text-anchor="end">16. APP</text>
+<text x="249.0" y="445.0" font-size="11" fill="#8b949e" text-anchor="start">-58% · below 10m MA</text>
+<rect x="244.0" y="457" width="1.0" height="16" fill="#9aa3ad" rx="2"/>
+<text x="162" y="469.0" font-size="12" fill="#8b949e" text-anchor="end">SPCX</text>
+<text x="249.0" y="469.0" font-size="11" fill="#8b949e" text-anchor="start">+0%  too new to rank</text>
+</svg>

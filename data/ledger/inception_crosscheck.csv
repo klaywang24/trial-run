@@ -1,0 +1,7 @@
+ticker,window_start,window_end,yahoo_mom_12_1,longbridge_mom_12_1,note
+PLTR,2025-11-10,2026-10-13,0.0778,0.0778,rank 13 (exit) vs MSFT rank 12 decided by 0.5pp; both sources agree
+MSFT,2025-11-10,2026-10-13,0.0828,0.0829,rank 12 (keep)
+NVDA,2025-11-10,2026-10-13,0.1508,0.1508,rank 11 (keep)
+META,2025-11-10,2026-10-13,0.2110,0.2111,rank 10 (keep)
+GOOGL,2025-11-10,2026-10-13,0.2227,0.2227,rank 9 (not held; no open slot)
+AAPL,2025-11-10,2026-10-13,0.2701,0.2701,rank 8 (keep)

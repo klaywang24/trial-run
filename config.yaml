@@ -1,0 +1,62 @@
+# =====================================================================
+#  Trial Run — parameters (methodology v1.0)
+#  This file is the executable copy of METHODOLOGY.md. If the two conflict,
+#  the methodology governs and this file is corrected through a dated
+#  `methodology:` commit plus an ERRATA entry.
+#  Frozen: its SHA-256 is recorded in FROZEN.sha256 and checked by CI on
+#  every run. A change without a matching hash update fails the workflow.
+# =====================================================================
+
+meta:
+  name: "Trial Run"
+  name_zh: "小试牛刀"
+  methodology_version: "1.0"
+  inception_date: "2026-11-12"   # books open at this day's close, base 100
+  first_annual_selection: "2027-01-04"
+  benchmark: "SPY"
+  comparisons: ["QQQ"]
+  cost_bp_per_side: 10           # charged on every traded dollar, buy and sell
+
+# ---- Sleeves: fixed targets (share of the whole portfolio) ----
+# Yahoo tickers. Only the AI sleeve rotates; every other sleeve is fixed.
+sleeves:
+  ai:             {target: 0.40, rotates: true}
+  sports:         {target: 0.10, holdings: {GRMN: 0.06, MSGK: 0.04}}
+  fintech:        {target: 0.10, holdings: {V: 0.04, MA: 0.03, AXP: 0.03}}
+  health_energy:  {target: 0.10, holdings: {LLY: 0.05, XLE: 0.05}}
+  income:         {target: 0.10, holdings: {SPDV: 0.10}}
+  defense:        {target: 0.10, holdings: {KO: 0.05, BRK-B: 0.05}}
+  reserve:        {target: 0.10, holdings: {BIL: 0.10}}
+
+# ---- AI sleeve ----
+ai:
+  pool: [AAPL, NVDA, MSFT, META, AMZN, GOOGL, AMD, NET, MU, LRCX, APP, GEV, LITE, PLTR, TSM, AVGO, SPCX]
+  chips: [NVDA, AMD, MU, LRCX, TSM, AVGO, LITE]
+  park: SPY                      # where money freed by the stop or the market switch waits
+  momentum_lookback_days: 252    # 12-1 momentum: close 21 days ago / close 252 days ago - 1
+  momentum_skip_days: 21
+  min_history_days: 253          # a name is ranked only after 253 trading days of history
+  select_n: 8                    # annual selection: top 8
+  exit_rank: 12                  # a held name stays while it ranks 12 or better
+  stock_cap_of_sleeve: 0.20      # trim a name above 20% of the AI sleeve (~8% of the portfolio)
+  chips_cap_of_sleeve: 0.60      # chip names together at most 60% of the AI sleeve
+  ma_months: 10                  # trend filter: month-end close vs 10-month average
+  stop_halve_once_per_year: true # quarterly stop halves a name at most once per annual cycle
+  market_switch: monthly         # SPY below its 10-month average: half the AI sleeve goes to SPY
+
+# ---- Calendar (first trading day of each period, New York) ----
+calendar:
+  annual_selection_month: 1
+  quarterly_months: [1, 4, 7, 10]
+
+# ---- Rebalancing between sleeves ----
+rebalance:
+  check: quarterly
+  relative_band: 0.50            # any holding (AI sleeve counted as one) off target by >50% relative -> reset all to target
+
+# ---- Kill criteria (see METHODOLOGY §7) ----
+kill:
+  ai_vs_smh_years: 3
+  ai_vs_smh_gap_pp: 15
+  portfolio_vs_spy_years: 3
+  portfolio_vs_spy_gap_pp: 15
