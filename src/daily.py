@@ -18,6 +18,7 @@ from .rules import annual_selection, cap_redistribute, EXIT, CAP
 
 POS, NAV, TRD, STATE = LEDGER / "positions.csv", LEDGER / "nav.csv", LEDGER / "trades.csv", LEDGER / "state.json"
 PRE, RANK = LEDGER / "pre_launch_units.csv", LEDGER / "ai_ranking_latest.csv"
+PNL = LEDGER / "pnl_by_holding.csv"
 INC = pd.Timestamp(CFG["meta"]["inception_date"])
 BENCH, COMP = CFG["meta"]["benchmark"], CFG["meta"]["comparisons"]
 AI_T = CFG["sleeves"]["ai"]["target"]
@@ -26,6 +27,9 @@ BP = CFG["meta"]["cost_bp_per_side"] / 1e4
 AI_SLEEVES = ("ai", "ai_park", "ai_park_switch")
 NAV_COLS = ["date", "level", BENCH.lower(), *[c.lower() for c in COMP], "pre_launch", "ai_weight", "ai_names", "market_switch", "events"]
 TRD_COLS = ["date", "ticker", "sleeve", "units_before", "units_after", "price", "value_change", "reason"]
+# One row per holding per recorded day. pnl = units held into the day x (close - previous close), in index points.
+# The day's trading cost is its own row (ticker COST). Sum of a day's pnl = level change that day (to 1e-4: nav.csv rounds the level to 4 decimals).
+PNL_COLS = ["date", "ticker", "sleeve", "weight_prev", "ret", "pnl"]
 
 
 def read_pos():
@@ -100,6 +104,11 @@ def process_day(P, d, prev):
         print(f"WARNING: {d.date()} not recorded, missing closes for {miss}"); return False
     val = {k: u * px[k[0]] for k, u in pos.items()}
     nav = sum(val.values())
+    ppx = P.loc[prev]
+    lvl_prev = sum(u * ppx[k[0]] for k, u in pos.items())
+    pnl_rows = [{"date": d.date(), "ticker": k[0], "sleeve": k[1], "weight_prev": round(u * ppx[k[0]] / lvl_prev, 6),
+                 "ret": round(px[k[0]] / ppx[k[0]] - 1, 6), "pnl": round(u * (px[k[0]] - ppx[k[0]]), 6)}
+                for k, u in sorted(pos.items(), key=lambda x: (x[0][1], x[0][0])) if u > 1e-12]
     new = dict(val)                      # target dollar values after today's trades
     events, reasons = [], {}
     month = d.month != prev.month
@@ -206,6 +215,10 @@ def process_day(P, d, prev):
     level = sum(u * px[t] for (t, _), u in newpos.items())
     if trades:
         append(TRD, TRD_COLS, trades)
+    if cost > 0:
+        pnl_rows.append({"date": d.date(), "ticker": "COST", "sleeve": "cost", "weight_prev": 0, "ret": 0,
+                         "pnl": round(-cost, 6)})
+    append(PNL, PNL_COLS, pnl_rows)
     write_pos(newpos); write_json(STATE, st)
     base = st["bench_base"]
     pre_level = sum(u if t == "CASH" else u * px[t] for t, u in pre.items())
@@ -254,11 +267,18 @@ def main():
             print(f"WARNING: no bar for inception day {INC.date()} yet."); return
         if not open_books(P):
             return
+        new_day = True
+    else:
+        new_day = False
     prev = last_date()
     for d in P.index[P.index > prev]:
         if not process_day(P, d, prev):
             break
         prev = d
+        new_day = True
+    if not new_day:
+        print(f"{prev.date()} already recorded; nothing new (no commit).")
+        return                           # the backup run must not rewrite derived files: one commit per day
     d = last_date()
     write_ranking(P, d)
     with open(LEDGER / "last_close.csv", "w", newline="") as f:

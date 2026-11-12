@@ -1,0 +1,31 @@
+ticker,name_en,name_zh,website,domain,type,website_source,fetched,logo
+AAPL,Apple Inc.,苹果,https://www.apple.com,apple.com,EQUITY,yahoo,2026-11-12,assets/logos/AAPL.png
+NVDA,NVIDIA Corporation,英伟达,https://www.nvidia.com,nvidia.com,EQUITY,yahoo,2026-11-12,assets/logos/NVDA.png
+MSFT,Microsoft Corporation,微软,https://www.microsoft.com,microsoft.com,EQUITY,yahoo,2026-11-12,assets/logos/MSFT.png
+META,"Meta Platforms, Inc.",Meta,https://www.meta.com,meta.com,EQUITY,yahoo,2026-11-12,assets/logos/META.png
+AMZN,"Amazon.com, Inc.",亚马逊,https://www.amazon.com,amazon.com,EQUITY,yahoo,2026-11-12,assets/logos/AMZN.png
+GOOGL,Alphabet Inc.,谷歌母公司 Alphabet,https://abc.xyz,abc.xyz,EQUITY,yahoo,2026-11-12,assets/logos/GOOGL.png
+AMD,"Advanced Micro Devices, Inc.",AMD,https://www.amd.com,amd.com,EQUITY,yahoo,2026-11-12,assets/logos/AMD.png
+NET,"Cloudflare, Inc.",Cloudflare,https://www.cloudflare.com,cloudflare.com,EQUITY,yahoo,2026-11-12,assets/logos/NET.png
+MU,"Micron Technology, Inc.",美光,https://www.micron.com,micron.com,EQUITY,yahoo,2026-11-12,assets/logos/MU.png
+LRCX,Lam Research Corporation,泛林,https://www.lamresearch.com,lamresearch.com,EQUITY,yahoo,2026-11-12,assets/logos/LRCX.png
+APP,AppLovin Corporation,AppLovin,https://www.applovin.com,applovin.com,EQUITY,yahoo,2026-11-12,
+GEV,GE Vernova Inc.,GE Vernova,https://www.gevernova.com,gevernova.com,EQUITY,yahoo,2026-11-12,assets/logos/GEV.png
+LITE,Lumentum Holdings Inc.,Lumentum,https://www.lumentum.com,lumentum.com,EQUITY,yahoo,2026-11-12,assets/logos/LITE.png
+PLTR,Palantir Technologies Inc.,Palantir,https://www.palantir.com,palantir.com,EQUITY,yahoo,2026-11-12,assets/logos/PLTR.png
+TSM,Taiwan Semiconductor Manufacturing Company Limited,台积电,https://www.tsmc.com,tsmc.com,EQUITY,yahoo,2026-11-12,assets/logos/TSM.png
+AVGO,Broadcom Inc.,博通,https://www.broadcom.com,broadcom.com,EQUITY,yahoo,2026-11-12,assets/logos/AVGO.png
+SPCX,Space Exploration Technologies Corp.,SpaceX,https://www.spacex.com,spacex.com,EQUITY,yahoo,2026-11-12,assets/logos/SPCX.png
+GRMN,Garmin Ltd.,佳明,https://www.garmin.com,garmin.com,EQUITY,yahoo,2026-11-12,assets/logos/GRMN.png
+MSGK,MSG Knickerbockers Corp.,尼克斯队母公司 MSG,https://www.msgknicks.com,msgknicks.com,EQUITY,yahoo,2026-11-12,assets/logos/MSGK.png
+V,Visa Inc.,Visa,https://corporate.visa.com,corporate.visa.com,EQUITY,yahoo,2026-11-12,assets/logos/V.png
+MA,Mastercard Incorporated,万事达,https://www.mastercard.com,mastercard.com,EQUITY,yahoo,2026-11-12,assets/logos/MA.png
+AXP,American Express Company,美国运通,https://www.americanexpress.com,americanexpress.com,EQUITY,yahoo,2026-11-12,assets/logos/AXP.png
+LLY,Eli Lilly and Company,礼来,https://www.lilly.com,lilly.com,EQUITY,yahoo,2026-11-12,assets/logos/LLY.png
+XLE,State Street Energy Select Sector SPDR ETF,能源行业 ETF,https://www.ssga.com,ssga.com,ETF,issuer,2026-11-12,assets/logos/XLE.png
+SPDV,AAM S&P 500 High Dividend Value ETF,标普500高股息价值 ETF,https://www.aamlive.com,aamlive.com,ETF,issuer,2026-11-12,
+KO,The Coca-Cola Company,可口可乐,https://www.coca-colacompany.com,coca-colacompany.com,EQUITY,yahoo,2026-11-12,assets/logos/KO.png
+BRK-B,Berkshire Hathaway Inc.,伯克希尔,https://www.berkshirehathaway.com,berkshirehathaway.com,EQUITY,yahoo,2026-11-12,
+BIL,State Street SPDR Bloomberg 1-3 Month T-Bill ETF,1-3 个月美债 ETF,https://www.ssga.com,ssga.com,ETF,issuer,2026-11-12,assets/logos/BIL.png
+SPY,State Street SPDR S&P 500 ETF Trust,标普500 ETF,https://www.ssga.com,ssga.com,ETF,issuer,2026-11-12,assets/logos/SPY.png
+QQQ,Invesco QQQ Trust,纳指100 ETF,https://www.invesco.com,invesco.com,ETF,issuer,2026-11-12,assets/logos/QQQ.png

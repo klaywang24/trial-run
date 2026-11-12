@@ -39,6 +39,9 @@ jobs:
       - name: render charts
         run: python -m src.render
 
+      - name: build P&L dashboard
+        run: python -m src.dashboard
+
       - name: commit data
         run: |
           git config user.name  "Klay"

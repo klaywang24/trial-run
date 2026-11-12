@@ -101,6 +101,8 @@ Three findings decided the design:
 | [`data/ledger/trades.csv`](data/ledger/trades.csv) | Every trade with date, price and the rule that caused it |
 | [`data/ledger/positions.csv`](data/ledger/positions.csv) | Units held now |
 | [`data/ledger/ai_ranking_latest.csv`](data/ledger/ai_ranking_latest.csv) | Today's ranking and which line each name sits on |
+| [`data/ledger/pnl_by_holding.csv`](data/ledger/pnl_by_holding.csv) | Each holding's P&L points per day; they add up to the day's level change |
+| [`output/dashboard.html`](output/dashboard.html) | P&L dashboard: day, week, month and year calendar, and which holdings drove each return and drawdown. Download and open in a browser |
 | [`config.yaml`](config.yaml) | The frozen parameters ([hash](FROZEN.sha256)) |
 | [`ERRATA.md`](ERRATA.md) · [`POOL_CHANGES.md`](POOL_CHANGES.md) | Corrections and pool changes |
 

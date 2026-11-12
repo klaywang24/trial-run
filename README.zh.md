@@ -87,6 +87,8 @@ AI 股票池（17 只）： AAPL、NVDA、MSFT、META、AMZN、GOOGL、AMD、NET
 | [`data/ledger/trades.csv`](data/ledger/trades.csv) | 每笔交易的日期、价格和触发它的规则 |
 | [`data/ledger/positions.csv`](data/ledger/positions.csv) | 当前持有的份额 |
 | [`data/ledger/ai_ranking_latest.csv`](data/ledger/ai_ranking_latest.csv) | 最新排名，以及每只股票在哪条线上 |
+| [`data/ledger/pnl_by_holding.csv`](data/ledger/pnl_by_holding.csv) | 每只持仓每天贡献的盈亏点数，加起来等于当天净值变化 |
+| [`output/dashboard.html`](output/dashboard.html) | P&L 看板：日、周、月、年的盈亏日历，每段时间的收益和回撤来自哪些票。下载后用浏览器打开 |
 | [`config.yaml`](config.yaml) | 冻结的参数（[哈希](FROZEN.sha256)） |
 | [`ERRATA.md`](ERRATA.md) · [`POOL_CHANGES.md`](POOL_CHANGES.md) | 勘误和股票池变更 |
 
