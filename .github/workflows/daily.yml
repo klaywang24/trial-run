@@ -4,10 +4,10 @@ name: daily ledger
 # selection) fire inside src/daily.py. This workflow only produces `data:` commits and never touches rule files.
 on:
   schedule:
-    - cron: "30 17 * * 1-5"   # 17:30 New York, after the close settles
-      timezone: "America/New_York"
-    - cron: "30 19 * * 1-5"   # backup run; idempotent, a recorded day is skipped
-      timezone: "America/New_York"
+    # Plain UTC (no timezone key). 22:30 UTC = 17:30 New York in winter, 18:30 in summer: always after the close.
+    - cron: "30 22 * * 1-5"
+    # Backup run 00:30 UTC next day = 19:30 / 20:30 New York. Idempotent: a recorded day makes no commit.
+    - cron: "30 0 * * 2-6"
   workflow_dispatch:
 
 permissions:
