@@ -97,8 +97,10 @@ against Longbridge data and the two sources agree (`data/ledger/inception_crossc
 
 ## 6. Data and execution
 
-- Prices: Yahoo adjusted closes. The workflow runs at 17:30 New York time on weekdays, with a second run at 19:30.
-  A day already recorded is never recorded twice.
+- Prices: Yahoo adjusted closes. The workflow runs three times after each close: 17:17 and 18:43 New York time
+  (an hour later in summer), plus a catch-up run at 08:11 the next morning. GitHub can drop scheduled runs, so the
+  maintainer's machine also starts the same workflow when the ledger falls behind. A day already recorded is never
+  recorded twice, and the run time never changes the prices recorded.
 - Signals use closes up to the previous trading day. Trades fill at the decision day's close.
 - If any needed close is missing, the day is not recorded and the next run catches up. A missing day beats an
   estimated price.
