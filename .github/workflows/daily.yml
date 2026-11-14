@@ -64,6 +64,33 @@ jobs:
           done
           git push
 
+      # Dead-man switch. A heartbeat goes out only when the ledger has the last closed NYSE session.
+      # An outside monitor (healthchecks.io, URL in the HC_PING_URL secret) emails when a weekday passes
+      # with no heartbeat: that covers dropped schedules and a local watchdog that is offline.
+      - name: heartbeat
+        continue-on-error: true
+        env:
+          HC: ${{ secrets.HC_PING_URL }}
+        run: |
+          pip install --quiet pandas_market_calendars
+          python - <<'EOF'
+          import datetime as dt, os, urllib.request
+          import pandas as pd, pandas_market_calendars as mcal
+          now = pd.Timestamp.now(tz="UTC")
+          s = mcal.get_calendar("NYSE").schedule(start_date=(now - pd.Timedelta(days=14)).date(), end_date=now.date())
+          want = s[s.market_close <= now - pd.Timedelta(minutes=30)].index[-1].date()
+          last = open("data/ledger/nav.csv").read().strip().splitlines()[-1].split(",")[0]
+          have = dt.date.fromisoformat(last) if last[:1].isdigit() else None
+          print("ledger", have, "| last closed NYSE session", want)
+          if have is None or have < want:
+              print("ledger behind: no heartbeat")
+          elif not os.environ.get("HC"):
+              print("HC_PING_URL not set: heartbeat skipped")
+          else:
+              urllib.request.urlopen(os.environ["HC"], timeout=15)
+              print("heartbeat sent")
+          EOF
+
       - name: anchor to Wayback
         continue-on-error: true
         run: |
