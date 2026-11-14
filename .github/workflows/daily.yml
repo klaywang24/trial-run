@@ -4,11 +4,18 @@ name: daily ledger
 # selection) fire inside src/daily.py. This workflow only produces `data:` commits and never touches rule files.
 on:
   schedule:
-    # Plain UTC (no timezone key). 22:30 UTC = 17:30 New York in winter, 18:30 in summer: always after the close.
-    - cron: "30 22 * * 1-5"
-    # Backup run 00:30 UTC next day = 19:30 / 20:30 New York. Idempotent: a recorded day makes no commit.
-    - cron: "30 0 * * 2-6"
+    # Plain UTC (no timezone key). GitHub drops scheduled runs under load, most often at :00 and :30, and
+    # no :30 slot fired on 2026-11-13. So three runs on odd minutes, all after the close. Every run is
+    # idempotent: a recorded day makes no commit. A local watchdog dispatches the run if all three are dropped.
+    - cron: "17 22 * * 1-5"   # 17:17 / 18:17 New York
+    - cron: "43 23 * * 1-5"   # 18:43 / 19:43 New York
+    - cron: "11 13 * * 2-6"   # next morning 08:11 / 09:11 New York, catches a late Yahoo daily bar
   workflow_dispatch:
+
+# Runs never overlap: a second run waits and then sees the day already recorded.
+concurrency:
+  group: daily-ledger
+  cancel-in-progress: false
 
 permissions:
   contents: write
