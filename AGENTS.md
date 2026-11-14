@@ -5,8 +5,13 @@ Last updated 2026-11-12 09:20 -0500 (New York).
 Read in this order: `METHODOLOGY.md` (or `.zh.md`), then `README.md`, then this file.
 
 ## What runs, and when
-- `.github/workflows/daily.yml`, 17:30 and 19:30 New York time: frozen-hash check, tests, `python -m src.daily`,
-  `python -m src.render`, `python -m src.dashboard`, then one `data:` commit per trading day.
+- `.github/workflows/daily.yml`, scheduled at 22:17 and 23:43 UTC and 13:11 UTC next morning (odd minutes; GitHub
+  dropped every :30 schedule in the first two days): frozen-hash check, tests, `python -m src.daily`,
+  `python -m src.render`, `python -m src.dashboard`, then one `data:` commit per trading day, then a heartbeat to an
+  outside monitor if the `HC_PING_URL` secret is set. Runs are serialized and idempotent, so a manual
+  `gh workflow run daily.yml` is always safe; the owner's machine also dispatches it when the ledger falls behind.
+- Check whether schedules fire with `gh api "repos/klaywang24/trial-run/actions/runs?event=schedule"`, not by the
+  workflow's active state.
 - The live dashboard is served by GitHub Pages from the main branch: `output/dashboard.html`.
 
 ## Rules for any agent working here
