@@ -1,18 +1,18 @@
 asof_close,ticker,mom_12_1,rank,above_10m_ma,chip,held,weight_in_portfolio,zone
-2026-11-11,LITE,2.8016,1,True,True,True,0.017699,top 8
-2026-11-11,MU,2.7668,2,True,True,True,0.053097,top 8
-2026-11-11,AMD,1.4819,3,True,True,False,0,top 8
-2026-11-11,LRCX,0.8182,4,False,True,False,0,top 8
-2026-11-11,GEV,0.7349,5,False,False,True,0.035398,top 8
-2026-11-11,TSM,0.5235,6,True,True,True,0.048673,top 8
-2026-11-11,NET,0.4456,7,True,False,True,0.047788,top 8
-2026-11-11,AAPL,0.2701,8,True,False,True,0.051327,top 8
-2026-11-11,GOOGL,0.2227,9,False,False,False,0,buffer 9-12
-2026-11-11,META,0.211,10,False,False,True,0.044248,buffer 9-12
-2026-11-11,NVDA,0.1508,11,True,True,True,0.066372,buffer 9-12
-2026-11-11,MSFT,0.0828,12,True,False,True,0.035398,buffer 9-12
-2026-11-11,PLTR,0.0778,13,True,False,False,0,outside 12
-2026-11-11,AMZN,0.041,14,False,False,False,0,outside 12
-2026-11-11,AVGO,0.0044,15,False,True,False,0,outside 12
-2026-11-11,APP,-0.582,16,False,False,False,0,outside 12
-2026-11-11,SPCX,,,,False,False,0,too new to rank
+2026-11-13,MU,2.8069,1,True,True,True,0.0519,top 8
+2026-11-13,LITE,2.4259,2,True,True,True,0.0169,top 8
+2026-11-13,AMD,1.1717,3,True,True,False,0.0,top 8
+2026-11-13,LRCX,0.7268,4,False,True,False,0.0,top 8
+2026-11-13,GEV,0.6131,5,False,False,True,0.0348,top 8
+2026-11-13,TSM,0.4683,6,True,True,True,0.048,top 8
+2026-11-13,NET,0.4016,7,True,False,True,0.046,top 8
+2026-11-13,AAPL,0.254,8,True,False,True,0.0516,top 8
+2026-11-13,GOOGL,0.2212,9,False,False,False,0.0,buffer 9-12
+2026-11-13,META,0.2138,10,False,False,True,0.0456,buffer 9-12
+2026-11-13,NVDA,0.1236,11,True,True,True,0.0652,buffer 9-12
+2026-11-13,PLTR,0.0887,12,True,False,False,0.0,buffer 9-12
+2026-11-13,MSFT,0.064,13,True,False,True,0.0355,outside 12
+2026-11-13,AMZN,0.0432,14,False,False,False,0.0,outside 12
+2026-11-13,AVGO,-0.0234,15,False,True,False,0.0,outside 12
+2026-11-13,APP,-0.5225,16,False,False,False,0.0,outside 12
+2026-11-13,SPCX,,,,False,False,0,too new to rank

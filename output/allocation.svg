@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 268" font-family="ui-sans-serif,system-ui,-apple-system,sans-serif">
+<text x="20" y="24" font-size="15" font-weight="600" fill="#8b949e">Sleeve weights at the last close</text>
+<text x="20" y="43" font-size="12" fill="#8b949e" opacity="0.8">as of 2026-11-13 · a holding off target by more than 50% (relative) resets all sleeves</text>
+<line x1="170.0" y1="66" x2="170.0" y2="242" stroke="#8b949e" stroke-opacity="0.5"/>
+<rect x="170.0" y="73" width="430.0" height="16" fill="#2b5f8f" rx="2"/>
+<text x="162" y="85.0" font-size="12" fill="#8b949e" text-anchor="end">ai</text>
+<text x="605.0" y="85.0" font-size="11" fill="#8b949e" text-anchor="start">39.6%  target 40%</text>
+<rect x="170.0" y="97" width="108.2" height="16" fill="#2b5f8f" rx="2"/>
+<text x="162" y="109.0" font-size="12" fill="#8b949e" text-anchor="end">sports</text>
+<text x="283.2" y="109.0" font-size="11" fill="#8b949e" text-anchor="start">9.9%  target 10%</text>
+<rect x="170.0" y="121" width="110.2" height="16" fill="#2b5f8f" rx="2"/>
+<text x="162" y="133.0" font-size="12" fill="#8b949e" text-anchor="end">fintech</text>
+<text x="285.2" y="133.0" font-size="11" fill="#8b949e" text-anchor="start">10.1%  target 10%</text>
+<rect x="170.0" y="145" width="110.1" height="16" fill="#2b5f8f" rx="2"/>
+<text x="162" y="157.0" font-size="12" fill="#8b949e" text-anchor="end">health + energy</text>
+<text x="285.1" y="157.0" font-size="11" fill="#8b949e" text-anchor="start">10.1%  target 10%</text>
+<rect x="170.0" y="169" width="109.5" height="16" fill="#2b5f8f" rx="2"/>
+<text x="162" y="181.0" font-size="12" fill="#8b949e" text-anchor="end">income</text>
+<text x="284.5" y="181.0" font-size="11" fill="#8b949e" text-anchor="start">10.1%  target 10%</text>
+<rect x="170.0" y="193" width="110.2" height="16" fill="#2b5f8f" rx="2"/>
+<text x="162" y="205.0" font-size="12" fill="#8b949e" text-anchor="end">defense</text>
+<text x="285.2" y="205.0" font-size="11" fill="#8b949e" text-anchor="start">10.1%  target 10%</text>
+<rect x="170.0" y="217" width="109.0" height="16" fill="#2b5f8f" rx="2"/>
+<text x="162" y="229.0" font-size="12" fill="#8b949e" text-anchor="end">reserve</text>
+<text x="284.0" y="229.0" font-size="11" fill="#8b949e" text-anchor="start">10.0%  target 10%</text>
+</svg>

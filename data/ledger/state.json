@@ -1,0 +1,19 @@
+{
+  "held": [
+    "AAPL",
+    "GEV",
+    "LITE",
+    "META",
+    "MSFT",
+    "MU",
+    "NET",
+    "NVDA",
+    "TSM"
+  ],
+  "halved": [],
+  "market_switch_on": true,
+  "bench_base": {
+    "SPY": 757.1199951171875,
+    "QQQ": 688.1699829101562
+  }
+}

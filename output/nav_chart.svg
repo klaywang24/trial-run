@@ -1,3 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 160" font-family="ui-sans-serif,system-ui,-apple-system,sans-serif">
-<text x="40" y="40" font-size="15" font-weight="600" fill="#8b949e">Trial Run vs SPY, QQQ and the pre-launch portfolio</text>
-<text x="40" y="80" font-size="13" fill="#8b949e" opacity="0.8">The record starts at the 2026-11-12 close (base 100). The chart appears after the second trading day.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" font-family="ui-sans-serif,system-ui,-apple-system,sans-serif">
+<text x="62" y="24" font-size="15" font-weight="600" fill="#8b949e">Trial Run · index level (base 100)</text>
+<text x="62" y="43" font-size="12" fill="#8b949e" opacity="0.8">inception 2026-11-12 close · forward record, never backfilled · costs 10 bp per side included</text>
+<text x="62" y="61" font-size="11.5" fill="#8b949e" opacity="0.62">2 trading days · -0.20% since inception · vs SPY +0.16 pts · max drawdown -0.20% · market switch on · as of 2026-11-13</text>
+<line x1="62" y1="304.7" x2="685" y2="304.7" stroke="#8b949e" stroke-opacity="0.16"/>
+<text x="54" y="308.7" font-size="11" fill="#8b949e" text-anchor="end">99.0</text>
+<line x1="62" y1="197.1" x2="685" y2="197.1" stroke="#8b949e" stroke-opacity="0.16"/>
+<text x="54" y="201.1" font-size="11" fill="#8b949e" text-anchor="end">99.5</text>
+<line x1="62" y1="89.5" x2="685" y2="89.5" stroke="#8b949e" stroke-opacity="0.16"/>
+<text x="54" y="93.5" font-size="11" fill="#8b949e" text-anchor="end">100.0</text>
+<line x1="62" y1="89.5" x2="685" y2="89.5" stroke="#8b949e" stroke-opacity="0.5" stroke-dasharray="4 4"/>
+<text x="62.0" y="388" font-size="11" fill="#8b949e" text-anchor="middle">11-12</text>
+<text x="685.0" y="388" font-size="11" fill="#8b949e" text-anchor="middle">11-13</text>
+<path d="M62.0,89.5 L685.0,239.2" fill="none" stroke="#8a7a3a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M62.0,89.5 L685.0,348.5" fill="none" stroke="#6b4c9a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M62.0,89.5 L685.0,167.7" fill="none" stroke="#2b5f8f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<defs><linearGradient id="gTrialRuninde" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a0392f" stop-opacity="0.24"/><stop offset="1" stop-color="#a0392f" stop-opacity="0"/></linearGradient></defs>
+<path d="M62.0,89.5 L685.0,133.6 L685.0,89.53571428571455 L62.0,89.53571428571455 Z" fill="url(#gTrialRuninde)" stroke="none"/>
+<path d="M62.0,89.5 L685.0,133.6" fill="none" stroke="#a0392f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="685.0" cy="133.6" r="3.2" fill="#a0392f"/>
+<text x="693" y="137.6" font-size="11.5" fill="#a0392f">Trial Run 99.8</text>
+<text x="693" y="171.7" font-size="11.5" fill="#2b5f8f">SPY 99.6</text>
+<text x="693" y="243.2" font-size="11.5" fill="#8a7a3a">Pre-launch 99.3</text>
+<text x="693" y="352.5" font-size="11.5" fill="#6b4c9a">QQQ 98.8</text>
+</svg>
